@@ -14,7 +14,7 @@ USB Killer Detector is an open-source security tool designed to help users ident
 ## Demo Video
 
 <p align="center">
-  <img src="./demo.gif" alt="Demo" width="800">
+  <img src="./demo.gif" alt="Demo" width="400">
 </p>
 
 *Click the image to watch the demonstration video.*
@@ -31,7 +31,8 @@ USB Killer Detector is an open-source security tool designed to help users ident
 
 ## Why This Project?
 
-Malicious USB devices can pose serious risks to computers and embedded systems. USB Killer Detector provides visibility into connected hardware, helping users better understand what devices are attached to their systems and identify potentially dangerous behavior.
+Malicious USB devices can pose serious risks to computers and embedded systems. USB * Evan Siby
+Killer Detector provides visibility into connected hardware, helping users better understand what devices are attached to their systems and identify potentially dangerous behavior.
 
 ## Installation
 
