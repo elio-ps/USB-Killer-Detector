@@ -1,0 +1,20 @@
+(version 1)
+
+# SENTINELLE v2 - isolation des lignes exposees a la haute tension d'un USB Killer
+# (D+, D- jusqu'aux resistances serie R8 / R12 ; voir schema bloc D).
+
+(rule "HV vers le reste : 1 mm"
+	(condition "A.NetClass == 'HV' && B.NetClass != 'HV'")
+	(constraint clearance (min 1.0mm)))
+
+(rule "HV entre lignes differentes : 0,6 mm"
+	(condition "A.NetClass == 'HV' && B.NetClass == 'HV' && A.Net != B.Net")
+	(constraint clearance (min 0.6mm)))
+
+(rule "Broches du connecteur USB-A (pas impose par le composant)"
+	(condition "A.Parent == 'J1' && B.Parent == 'J1'")
+	(constraint clearance (min 0.2mm)))
+
+(rule "Broches de blindage USB-C en bord de carte"
+	(condition "A.Parent == 'J2' && A.Pad_Number == 'SH'")
+	(constraint edge_clearance (min 0.3mm)))
