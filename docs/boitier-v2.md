@@ -88,12 +88,12 @@ axe, encoche côté USB-A.
       en face des composants.
 - [ ] Imprimer le boîtier et poser la carte nue (ou un gabarit papier à l'échelle 1) avant la commande.
 - [ ] Mesurer la hauteur réelle de SW1 : la datasheet Omron n'a pas été vérifiée, seul le modèle 3D KiCad l'a été.
-- [ ] Souder les LED **couvercle en place** : on les engage dans leurs tubes, on retourne l'ensemble, puis on soude.
-      Les LED servent ensuite de cales et maintiennent le PCB contre le fond.
+- [ ] À réception des cartes (LED soudées par JLC), vérifier que le couvercle ferme. Les tubes commencent à 9,4 mm
+      au-dessus du PCB. Une LED posée à plat (8,6 à 8,7 mm de haut) reste sous le tube ; une LED surélevée entre
+      dedans, tant que sa collerette reste sous 9,4 mm.
 
 ## Pistes non faites
 
-- Le PCB n'a pas de trou de fixation : il est seulement tenu par les parois, et par les LED si elles sont soudées
-  comme indiqué ci-dessus.
+- Le PCB n'a pas de trou de fixation : il est seulement tenu par les parois.
 - Au-dessus de J1, il reste une ouverture de 14 × 3,3 mm entre le connecteur et l'anneau du couvercle. Une
   languette sur le couvercle pourrait la fermer.

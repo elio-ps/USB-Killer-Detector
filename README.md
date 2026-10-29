@@ -76,15 +76,15 @@ Si la cause est toujours présente au moment du RESET, l'alarme se rallume aussi
 | Fichier | Contenu |
 |---|---|
 | `SENTINELLE-v2-gerbers.zip` | Gerber et perçages (contenu de `gerbers/`) : **à téléverser chez JLCPCB** |
-| `SENTINELLE-BOM-JLCPCB.xlsx` | BOM au format JLCPCB avec les numéros LCSC vérifiés ; lignes jaunes = LED à souder à la main : **à téléverser** |
+| `SENTINELLE-BOM-JLCPCB.xlsx` | BOM au format JLCPCB avec les numéros LCSC vérifiés, LED comprises : **à téléverser** |
 | `SENTINELLE-CPL-JLCPCB.csv` | Positions des composants au format JLCPCB : **à téléverser** |
 | `BOM.csv`, `placement-CPL.csv` | Exports bruts de KiCad |
 | `plan-assemblage-dessus.pdf` | Plan de placement, face composants |
 | `schema-v2.pdf` | Schéma complet |
 | `rapports/ERC.rpt`, `rapports/DRC.rpt` | Rapports de vérification de `kicad-cli` |
 
-Carte : 2 couches, 44 × 82 mm, 1,6 mm d'épaisseur. Tous les CMS sont assemblés par le fabricant. Les 5 LED de
-5 mm sont traversantes et se soudent à la main. Choix des références : `docs/bom-jlcpcb.md`.
+Carte : 2 couches, 44 × 82 mm, 1,6 mm d'épaisseur. **Tout est soudé par le fabricant**, y compris les 5 LED de
+5 mm traversantes : il faut donc commander l'assemblage des composants traversants. Choix des références : `docs/bom-jlcpcb.md`.
 
 ## Boîtier (`PCB/`)
 
@@ -94,7 +94,7 @@ Carte : 2 couches, 44 × 82 mm, 1,6 mm d'épaisseur. Tous les CMS sont assemblé
 
 Le boîtier est à jour pour la v2 : fente USB-A, ouverture USB-C, 5 trous de LED avec tubes guide-lumière, trou
 RESET et dégagements sous les broches. Il n'a pas encore été imprimé. Au montage, on retourne le couvercle autour
-de son grand axe, encoche de la lèvre côté USB-A, et on soude les LED couvercle en place.
+de son grand axe, encoche de la lèvre côté USB-A.
 
 ## Démo
 
