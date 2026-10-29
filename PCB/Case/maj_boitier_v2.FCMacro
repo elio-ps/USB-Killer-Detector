@@ -1,0 +1,232 @@
+# -*- coding: utf-8 -*-
+# SENTINELLE v2 - mise a jour du boitier pour le PCB v2
+#
+# Ce que fait la macro (voir docs/boitier-v2.md pour les cotes et le pourquoi) :
+#   Case.FCStd : fente USB-A ouverte vers le haut, ouverture USB-C recentree et
+#                agrandie, degagements sous les broches traversantes (PCB a plat).
+#   Lid.FCStd  : encoche de la levre au-dessus de l'USB-A, 5 trous de LED avec
+#                tube guide-lumiere, trou RESET avec tube guide ; les trous
+#                d'aeration qui genent sont supprimes.
+#   Puis : controle d'interference avec le modele 3D du PCB v2
+#          (PCB/SENTINELLE-v2-PCB.step) et export de PCB/Model.3mf.
+#
+# Lancement : FreeCAD > Macro > Macros... > choisir ce fichier > Executer
+#         ou : freecadcmd maj_boitier_v2.FCMacro   (depuis PCB/Case/)
+# Les nouvelles fonctions sont prefixees V2_ ; la macro refuse de tourner deux fois.
+#
+# Repere du boitier : origine au centre, z = 0 sous le fond, fond interieur a z = 3,
+# haut des parois a z = 15. PCB KiCad -> boitier : x = -(kx - 88,5), y = ky - 99.
+# Couvercle : dans son propre repere (plaque z 0..2, levre vers +z) ; pose sur le
+# boitier en le retournant autour de son grand axe (Y) : x_boitier = -x_couvercle.
+
+import math
+import os
+
+import FreeCAD as App
+import Part
+
+try:
+    HERE = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    HERE = os.getcwd()
+if not os.path.exists(os.path.join(HERE, "Case.FCStd")):
+    raise RuntimeError("Case.FCStd introuvable a cote de la macro (%s)" % HERE)
+PCB_DIR = os.path.dirname(HERE)
+STEP = os.path.join(PCB_DIR, "SENTINELLE-v2-PCB.step")
+OUT_3MF = os.path.join(PCB_DIR, "Model.3mf")
+
+FLOOR_Z = 3.0                 # dessus du fond du boitier
+PCB_TOP = FLOOR_Z + 1.6       # dessus du PCB pose a plat
+LID_TOP = 21.0                # boitier 15 + anneau 4 + plaque 2
+
+# Positions du CPL v2 dans le repere du boitier (centre des LED = milieu des pads)
+LEDS = {"D2": (16.73, -35.50), "D9": (-13.00, 9.56), "D10": (-13.00, 17.03),
+        "D11": (-13.00, 24.50), "D15": (-13.23, -13.50)}
+SW1 = (16.20, -3.50)
+J2_X = 0.82                   # axe de l'USB-C (decale de 0,88 mm par rapport a la v1)
+
+LED_TUBE_R, LED_HOLE_R, LED_TUBE_H = 3.6, 2.65, 5.0   # tube 14..19 mm en assemblage
+SW_TUBE_R, SW_HOLE_R, SW_TUBE_H = 2.5, 1.6, 8.0       # tube 11..19 mm, bouton a 8,9 mm
+
+# Tous les composants (CPL v2) pour nommer les interferences
+CPL = {
+    "C1": (8.200, -36.800), "C2": (8.200, -32.200), "C3": (13.600, -28.000), "C4": (13.600, -25.600),
+    "C5": (-0.100, 18.400), "C6": (7.300, 13.300), "C7": (8.900, -13.200), "C8": (-5.100, 11.500),
+    "C9": (5.900, -23.000), "C10": (-5.000, -9.500), "C11": (10.000, -3.500), "D1": (-9.100, -36.600),
+    "D2": (18.000, -35.500), "D3": (12.500, 21.000), "D4": (11.200, 32.800), "D5": (-5.000, 17.500),
+    "D6": (7.500, 5.000), "D7": (13.500, -19.500), "D8": (15.500, -9.500), "D9": (-14.265, 9.560),
+    "D10": (-14.265, 17.030), "D11": (-14.265, 24.500), "D12": (-6.500, -27.000), "D13": (-6.500, -22.000),
+    "D14": (-6.500, -17.000), "D15": (-11.960, -13.500), "F1": (8.000, 26.500), "J1": (0.000, 40.250),
+    "J2": (0.820, -38.700), "R1": (1.900, -31.600), "R2": (-0.500, -31.600), "R3": (11.900, -32.600),
+    "R4": (18.000, -28.000), "R5": (18.000, -25.600), "R6": (18.000, -23.200), "R7": (-2.000, 27.300),
+    "R8": (-2.000, 22.000), "R9": (-5.100, 14.400), "R10": (-0.100, 16.000), "R11": (2.500, 27.300),
+    "R12": (2.500, 22.000), "R13": (7.300, 8.500), "R14": (7.300, 10.900), "R15": (5.500, 20.500),
+    "R16": (8.900, -18.000), "R17": (8.900, -15.600), "R18": (7.000, -7.000), "R19": (7.000, -2.500),
+    "R20": (-5.500, -4.500), "R21": (10.000, -8.000), "R22": (-8.100, 7.500), "R23": (-8.100, 15.000),
+    "R24": (-8.100, 22.500), "R25": (-9.500, -23.000), "R26": (-14.700, -19.200), "SW1": (16.200, -3.500),
+    "U1": (0.500, 9.000), "U2": (0.500, -20.000), "U3": (0.500, -4.500),
+}
+
+
+def log(msg):
+    App.Console.PrintMessage(msg + "\n")
+    print(msg)
+
+
+def place(feature, x, y, z):
+    feature.MapMode = "Deactivated"
+    feature.Placement = App.Placement(App.Vector(x, y, z), App.Rotation())
+    if hasattr(feature, "Refine"):
+        feature.Refine = True
+
+
+def box(body, name, additive, x0, x1, y0, y1, z0, z1):
+    f = body.newObject("PartDesign::AdditiveBox" if additive else "PartDesign::SubtractiveBox", name)
+    f.Length, f.Width, f.Height = x1 - x0, y1 - y0, z1 - z0
+    place(f, x0, y0, z0)
+    return f
+
+
+def cylinder(body, name, additive, x, y, z0, r, h):
+    f = body.newObject("PartDesign::AdditiveCylinder" if additive else "PartDesign::SubtractiveCylinder", name)
+    f.Radius, f.Height = r, h
+    place(f, x, y, z0)
+    return f
+
+
+def check(doc, body):
+    doc.recompute()
+    bad = [o.Name for o in body.Group if o.Name.startswith("V2_") and not o.isValid()]
+    if bad:
+        raise RuntimeError("%s : fonctions en erreur %s" % (doc.Name, bad))
+    if len(body.Shape.Solids) != 1 or not body.Shape.isValid():
+        raise RuntimeError("%s : le corps n'est plus un solide unique valide" % doc.Name)
+
+
+# ---------------------------------------------------------------- boitier
+case_doc = App.openDocument(os.path.join(HERE, "Case.FCStd"))
+case = case_doc.getObject("Body")
+if case_doc.getObject("V2_FenteUSBA"):
+    raise RuntimeError("Macro deja appliquee (V2_FenteUSBA existe) : rien a faire")
+
+# USB-A (GCT USB1046, 12,8 x 7,12 mm, collerette 14,5 mm hors du boitier) :
+# l'ancienne fenetre 14 x 5 mm (z 5..10) ne laisse passer ni le corps ni la
+# collerette. Fente en U ouverte vers le haut : le PCB se pose verticalement.
+box(case, "V2_FenteUSBA", False, -7.0, 7.0, 40.5, 44.0, PCB_TOP - 0.4, 16.0)
+
+# USB-C (GCT USB4125, coque 8,94 x 3,26 mm, axe x = +0,82) : l'ancienne fente
+# 7,5 x 3 mm etait centree en x = -0,06 et trop petite. Ouverture 12,6 x 6,6 mm
+# pour laisser entrer le surmoulage de la fiche (12,35 x 6,5 mm max).
+box(case, "V2_OuvertureUSBC", False, J2_X - 6.3, J2_X + 6.3, -44.0, -40.5, FLOOR_Z, FLOOR_Z + 6.6)
+
+# Degagements de 1,5 mm sous les broches traversantes, pour que le PCB repose a plat
+for ref, (x, y) in LEDS.items():
+    box(case, "V2_Degagement_" + ref, False, x - 2.7, x + 2.7, y - 1.4, y + 1.4, FLOOR_Z - 1.5, FLOOR_Z + 0.2)
+for i, x in enumerate((6.4, -6.4)):
+    box(case, "V2_Degagement_J1_%d" % i, False, x - 1.1, x + 1.1, 36.7 - 1.95, 36.7 + 1.95, FLOOR_Z - 1.5, FLOOR_Z + 0.2)
+for i, x in enumerate((-3.5, 5.14)):
+    box(case, "V2_Degagement_J2_%d" % i, False, x - 1.05, x + 1.05, -40.9, -34.3, FLOOR_Z - 1.5, FLOOR_Z + 0.2)
+check(case_doc, case)
+log("Boitier : %d fonctions V2 ajoutees" % len([o for o in case.Group if o.Name.startswith("V2_")]))
+
+# ---------------------------------------------------------------- couvercle
+lid_doc = App.openDocument(os.path.join(HERE, "Lid.FCStd"))
+lid = lid_doc.getObject("Body")
+LED_LID = {ref: (-x, y) for ref, (x, y) in LEDS.items()}
+SW_LID = (-SW1[0], SW1[1])
+
+# Trous d'aeration (Sketch003) trop proches des nouveaux tubes : supprimes
+vents = lid_doc.getObject("Sketch003")
+drop = []
+for i, g in enumerate(vents.Geometry):
+    if not isinstance(g, Part.Circle):
+        continue
+    c = vents.Placement.multVec(g.Center)
+    near_led = any(math.hypot(c.x - x, c.y - y) < LED_TUBE_R + g.Radius + 0.5 for x, y in LED_LID.values())
+    near_sw = math.hypot(c.x - SW_LID[0], c.y - SW_LID[1]) < SW_TUBE_R + g.Radius + 0.5
+    if near_led or near_sw:
+        drop.append(i)
+if drop:
+    vents.delGeometries(drop)
+log("Couvercle : %d trous d'aeration supprimes" % len(drop))
+
+# Levre : encoche au-dessus de l'USB-A (haut du connecteur a 11,72 +/- 0,38 mm,
+# bas de la levre a 12 mm en assemblage)
+box(lid, "V2_EncocheLevreUSBA", False, -7.5, 7.5, 39.5, 42.0, 6.0, 9.5)
+
+# LED : tube guide-lumiere (bas du tube a 14 mm en assemblage) + trou de 5,3 mm
+for ref, (x, y) in LED_LID.items():
+    cylinder(lid, "V2_Tube_" + ref, True, x, y, 1.9, LED_TUBE_R, LED_TUBE_H + 0.1)
+for ref, (x, y) in LED_LID.items():
+    cylinder(lid, "V2_Trou_" + ref, False, x, y, -1.0, LED_HOLE_R, LED_TUBE_H + 4.0)
+
+# RESET : trou de 3,2 mm et tube guide pour un trombone ou une pointe de stylo
+cylinder(lid, "V2_Tube_SW1", True, SW_LID[0], SW_LID[1], 1.9, SW_TUBE_R, SW_TUBE_H + 0.1)
+cylinder(lid, "V2_Trou_SW1", False, SW_LID[0], SW_LID[1], -1.0, SW_HOLE_R, SW_TUBE_H + 4.0)
+check(lid_doc, lid)
+log("Couvercle : %d fonctions V2 ajoutees" % len([o for o in lid.Group if o.Name.startswith("V2_")]))
+
+# ---------------------------------------------------------------- controle
+case_shape = case.Shape.copy()
+lid_asm = lid.Shape.copy()
+lid_asm.rotate(App.Vector(0, 0, 0), App.Vector(0, 1, 0), 180)
+lid_asm.translate(App.Vector(0, 0, LID_TOP))
+
+parts = []
+if os.path.exists(STEP):
+    solids = Part.read(STEP).Solids
+    board = [s for s in solids if abs(s.BoundBox.XLength - 44) < 0.6 and abs(s.BoundBox.YLength - 82) < 0.6]
+    if len(board) != 1:
+        raise RuntimeError("PCB introuvable dans %s" % STEP)
+    bb = board[0].BoundBox
+    cx, cy, z0 = bb.Center.x, bb.Center.y, bb.ZMin
+    for s in solids:
+        s = s.copy()
+        s.rotate(App.Vector(cx, cy, 0), App.Vector(0, 0, 1), 180)
+        s.translate(App.Vector(-cx, -cy, FLOOR_Z - z0))
+        parts.append(s)
+    # J1 n'a pas de modele 3D dans KiCad 10 : boite d'apres le plan GCT USB1046
+    parts.append(Part.makeBox(12.8, 12.6, 7.12, App.Vector(-6.4, 33.58, PCB_TOP)))
+    parts.append(Part.makeBox(14.5, 0.8, 7.12, App.Vector(-7.25, 46.18, PCB_TOP)))
+else:
+    log("ATTENTION : %s absent, controle d'interference saute" % STEP)
+
+
+def nearest(shape):
+    c = shape.BoundBox.Center
+    return min(CPL, key=lambda r: math.hypot(CPL[r][0] - c.x, CPL[r][1] - c.y))
+
+
+problems = []
+for s in parts:
+    for name, other in (("boitier", case_shape), ("couvercle", lid_asm)):
+        v = s.common(other).Volume
+        if v > 0.01:
+            problems.append("%s touche le %s (%.2f mm3)" % (nearest(s), name, v))
+log("Controle : %d pieces, %d interference(s)" % (len(parts), len(problems)))
+for p in problems:
+    log("  - " + p)
+
+# ---------------------------------------------------------------- sauvegarde + 3MF
+case_doc.save()
+lid_doc.save()
+
+import Mesh
+import MeshPart
+
+
+def to_mesh(shape):
+    return MeshPart.meshFromShape(Shape=shape, LinearDeflection=0.02,
+                                  AngularDeflection=math.radians(10), Relative=False)
+
+
+lid_print = lid.Shape.copy()
+lid_print.translate(App.Vector(60, 0, 0))     # a cote du boitier, plaque sur le plateau
+exp = App.newDocument("SENTINELLE_3mf")
+m_case = exp.addObject("Mesh::Feature", "Boitier")
+m_case.Mesh = to_mesh(case_shape)
+m_lid = exp.addObject("Mesh::Feature", "Couvercle")
+m_lid.Mesh = to_mesh(lid_print)
+Mesh.export([m_case, m_lid], OUT_3MF)
+App.closeDocument(exp.Name)
+log("Enregistre : Case.FCStd, Lid.FCStd, %s" % OUT_3MF)
