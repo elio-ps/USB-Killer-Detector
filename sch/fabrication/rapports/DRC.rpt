@@ -1,0 +1,28 @@
+** Drc report for usb-killer-detector.kicad_pcb **
+** Created on 2026-10-29T18:47:26 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 2 DRC violations **
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: configuration des contraintes de la sérigraphie; warning (excluded)
+    @(107.5000 mm, 140.0000 mm): Segment on Edge.Cuts
+    @(81.9200 mm, 137.4100 mm): Segment of J1 on F.Silkscreen
+    Corps du connecteur USB-A hors carte par construction (empreinte de bibliotheque) : trait de serigraphie coupe au bord, sans effet
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: configuration des contraintes de la sérigraphie; warning (excluded)
+    @(107.5000 mm, 140.0000 mm): Segment on Edge.Cuts
+    @(95.0800 mm, 137.4100 mm): Segment of J1 on F.Silkscreen
+    Corps du connecteur USB-A hors carte par construction (empreinte de bibliotheque) : trait de serigraphie coupe au bord, sans effet
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
