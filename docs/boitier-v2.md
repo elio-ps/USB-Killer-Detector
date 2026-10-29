@@ -4,11 +4,20 @@
 Ce document compare leurs découpes avec la carte v2 et décrit les corrections apportées par
 la macro `PCB/Case/maj_boitier_v2.FCMacro`.
 
-> **État au 29 octobre 2026 :** les cotes ci-dessous ont été **calculées** à partir du PCB
-> (KiCad 10.0.3), des esquisses lues dans les `.FCStd` et des plans constructeur. La macro
-> **n'a pas encore été exécutée** : il faut la lancer dans FreeCAD, puis relire le résultat
-> (voir « Valider »). Tant que ce n'est pas fait, `PCB/Model.3mf` reste celui de juin et ne
-> correspond pas à la v2.
+> **État au 29 octobre 2026 :** les cotes ci-dessous ont été calculées à partir du PCB
+> (KiCad 10.0.3), des esquisses lues dans les `.FCStd` et des plans constructeur. La macro a
+> ensuite été **exécutée** (FreeCAD 1.1.4, `freecadcmd`) :
+>
+> ```
+> Boitier : 11 fonctions V2 ajoutees
+> Couvercle : 34 trous d'aeration supprimes
+> Couvercle : 13 fonctions V2 ajoutees
+> Controle : 75 pieces, 0 interference(s)
+> ```
+>
+> Contrôle du nouveau `PCB/Model.3mf` par calcul : les deux maillages sont fermés, et 22 points
+> de contrôle (fentes, ouverture, trous, tubes, encoche, aérations retirées ou conservées) tombent
+> du bon côté, matière ou vide. Pas encore imprimé.
 
 ## Fichiers
 
@@ -74,7 +83,7 @@ axe, encoche côté USB-A.
 
 ## Valider (à la main)
 
-- [ ] La macro passe sans erreur et annonce 0 interférence.
+- [x] La macro passe sans erreur et annonce 0 interférence (29 octobre 2026).
 - [ ] Contrôle visuel dans FreeCAD : la fente USB-A, l'ouverture USB-C, les 5 tubes et le tube RESET tombent
       en face des composants.
 - [ ] Imprimer le boîtier et poser la carte nue (ou un gabarit papier à l'échelle 1) avant la commande.

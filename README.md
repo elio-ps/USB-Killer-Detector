@@ -92,8 +92,9 @@ Carte : 2 couches, 44 × 82 mm, 1,6 mm d'épaisseur. Tous les CMS sont assemblé
 `PCB/SENTINELLE-v2-PCB.step` (modèle 3D de la carte). La vérification des découpes par rapport à la v2 est dans
 `docs/boitier-v2.md`.
 
-> TODO : exécuter `PCB/Case/maj_boitier_v2.FCMacro` dans FreeCAD pour mettre le boîtier à jour (USB-A, USB-C,
-> LED, RESET) et régénérer `Model.3mf`.
+Le boîtier est à jour pour la v2 : fente USB-A, ouverture USB-C, 5 trous de LED avec tubes guide-lumière, trou
+RESET et dégagements sous les broches. Il n'a pas encore été imprimé. Au montage, on retourne le couvercle autour
+de son grand axe, encoche de la lèvre côté USB-A, et on soude les LED couvercle en place.
 
 ## Démo
 
