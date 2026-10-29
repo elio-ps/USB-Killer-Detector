@@ -1,2 +1,6 @@
 # Historique local automatique de KiCad 10 (contient son propre depot git)
 .history/
+
+# Sauvegardes automatiques de KiCad et de FreeCAD (l'historique git suffit)
+*-backups/
+*.FCBak
