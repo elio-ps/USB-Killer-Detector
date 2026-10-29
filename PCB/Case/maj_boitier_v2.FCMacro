@@ -25,12 +25,15 @@ import os
 import FreeCAD as App
 import Part
 
+# Dossier PCB/Case : celui de la macro, sinon le dossier courant ou la racine du depot
+candidates = [os.getcwd(), os.path.join(os.getcwd(), "PCB", "Case")]
 try:
-    HERE = os.path.dirname(os.path.abspath(__file__))
+    candidates.insert(0, os.path.dirname(os.path.abspath(__file__)))
 except NameError:
-    HERE = os.getcwd()
-if not os.path.exists(os.path.join(HERE, "Case.FCStd")):
-    raise RuntimeError("Case.FCStd introuvable a cote de la macro (%s)" % HERE)
+    pass
+HERE = next((d for d in candidates if os.path.exists(os.path.join(d, "Case.FCStd"))), None)
+if HERE is None:
+    raise RuntimeError("Case.FCStd introuvable (cherche dans %s)" % candidates)
 PCB_DIR = os.path.dirname(HERE)
 STEP = os.path.join(PCB_DIR, "SENTINELLE-v2-PCB.step")
 OUT_3MF = os.path.join(PCB_DIR, "Model.3mf")
