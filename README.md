@@ -23,7 +23,7 @@ il n'y a rien à installer.
 
 ## Fonctionnement (blocs A à H du schéma)
 
-Le schéma est `sch/usb-killer-detector.kicad_sch`, également disponible en PDF : `sch/fabrication/schema-v2.pdf`.
+Le schéma est `sch/usb-killer-detector.kicad_sch`.
 
 | Bloc | Rôle | Composants |
 |---|---|---|
@@ -71,17 +71,20 @@ manque d'attention. Pour l'effacer :
 
 Si la cause est toujours présente au moment du RESET, l'alarme se rallume aussitôt.
 
-## Fabrication (`sch/fabrication/`)
+## Fabrication (`sch/production/`)
+
+Ces fichiers sont générés par le plugin KiCad **Fabrication Toolkit** (réglages dans `sch/fabrication-toolkit-options.json`).
 
 | Fichier | Contenu |
 |---|---|
-| `SENTINELLE-v2-gerbers.zip` | Gerber et perçages (contenu de `gerbers/`) : **à téléverser chez JLCPCB** |
-| `SENTINELLE-BOM-JLCPCB.xlsx` | BOM au format JLCPCB avec les numéros LCSC vérifiés, LED comprises : **à téléverser** |
-| `SENTINELLE-CPL-JLCPCB.csv` | Positions des composants au format JLCPCB : **à téléverser** |
-| `BOM.csv`, `placement-CPL.csv` | Exports bruts de KiCad |
-| `plan-assemblage-dessus.pdf` | Plan de placement, face composants |
-| `schema-v2.pdf` | Schéma complet |
-| `rapports/ERC.rpt`, `rapports/DRC.rpt` | Rapports de vérification de `kicad-cli` |
+| `usb-killer-detector.zip` | Gerber et perçages : **à téléverser chez JLCPCB** |
+| `bom.csv` | BOM au format JLCPCB, avec les numéros LCSC vérifiés (LED comprises) : **à téléverser** |
+| `positions.csv` | Positions des composants, rotations déjà corrigées pour JLC : **à téléverser** |
+| `designators.csv`, `netlist.ipc` | Fichiers annexes du plugin |
+| `bom-JLCPCB Assembly Order.xls` | Rapport de rapprochement exporté depuis le site JLC lors d'un premier essai. **Périmé** : il propose encore des 220 kΩ à ±5 % et ne trouve pas les LED. Se fier à `bom.csv` |
+
+Les numéros LCSC sont stockés dans le champ `LCSC Part #` de chaque composant, dans le schéma comme dans le PCB.
+Le plugin les reprend donc à chaque régénération. Les rapports ERC et DRC de `kicad-cli` sont dans `sch/rapports/`.
 
 Carte : 2 couches, 44 × 82 mm, 1,6 mm d'épaisseur. **Tout est soudé par le fabricant**, y compris les 5 LED de
 5 mm traversantes : il faut donc commander l'assemblage des composants traversants. Choix des références : `docs/bom-jlcpcb.md`.

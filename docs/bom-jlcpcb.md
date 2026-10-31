@@ -1,10 +1,11 @@
 # BOM JLCPCB : choix des références
 
-Fichiers : `sch/fabrication/SENTINELLE-BOM-JLCPCB.xlsx` (onglet « BOM JLCPCB » à téléverser, onglet
-« Details » pour les justifications) et `sch/fabrication/SENTINELLE-CPL-JLCPCB.csv`.
+Fichiers à téléverser : `sch/production/bom.csv` et `sch/production/positions.csv`, générés par le plugin
+KiCad Fabrication Toolkit. Les numéros LCSC sont stockés dans le champ `LCSC Part #` de chaque composant
+(schéma et PCB), et le plugin les reprend à chaque régénération.
 
 Chaque numéro LCSC a été vérifié le 29 octobre 2026 sur le catalogue JLCPCB : il existe, il est en stock et
-son boîtier correspond. Le stock relevé ce jour-là figure dans l'onglet « Details ». **Tout est soudé par JLCPCB**,
+son boîtier correspond. **Tout est soudé par JLCPCB**,
 y compris les 5 LED traversantes : l'équipe ne soude rien.
 
 ## R7, R8, R11, R12 : 220 kΩ 1206 à 1 %
@@ -70,7 +71,8 @@ Repli si le stock baisse : **C17956**, UNI-ROYAL 1206W4F2203T5E (1 %, 200 V, 110
   conviennent pas : ce sont des TTL, qui ne fournissent pas assez de courant aux LED.
 - **Pièces extended** : 14 lignes, dont 2 « preferred » (R10/R14 et R17). Chez JLC, chaque pièce extended
   ajoute des frais de chargement. Le montant dépend de l'offre choisie : à vérifier sur le devis.
-- **CPL** : c'est `placement-CPL.csv` avec les en-têtes JLC (`Designator, Mid X, Mid Y, Layer, Rotation`) et les
-  coordonnées en mm. Les rotations sont celles de KiCad. Il faut **contrôler l'aperçu de placement JLC** (souvent
-  à corriger : SOT-23, SOIC, diodes SMA et SOD-123, connecteurs USB), et corriger dans l'interface JLC si
-  besoin.
+- **Positions** : `positions.csv` vient du plugin, réglé avec `AUTO TRANSLATE`. Les rotations sont déjà corrigées
+  pour JLC (SOT-23 +180°, SOIC −90°, bouton +90°), et les LED sont centrées sur leur corps. Il faut tout de même
+  **contrôler l'aperçu de placement JLC**, notamment le sens des LED.
+- `bom-JLCPCB Assembly Order.xls` est un rapprochement automatique fait sur le site JLC, avant ces choix. Il est
+  périmé (220 kΩ à ±5 %, LM339 et 120 kΩ de marques au hasard, aucune LED) : ne pas s'en servir.

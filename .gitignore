@@ -4,3 +4,7 @@
 # Sauvegardes automatiques de KiCad et de FreeCAD (l'historique git suffit)
 *-backups/
 *.FCBak
+
+# Fichiers de verrou et exports temporaires de KiCad
+~*.lck
+*-unsaved-export-*.kicad_prl

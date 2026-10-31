@@ -161,6 +161,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17313"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08f1878b-fb00-4411-b6e5-5f5b4979b829")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/fac8b20c-602d-5d51-a6f1-fe89068659ab")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -310,6 +322,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17737"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "52e2d018-9827-420b-a1a3-a272d6f2c43e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/06adabfa-0f8f-51d2-a488-22ccffdf97f0")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -455,6 +479,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49678"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d5366ef6-20e7-4473-92f6-5cd9089a43a4")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -612,6 +648,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dcdcaf93-b6b8-44ac-b647-6e2ded14b00b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C41430932"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a86e2c1e-5b27-46be-a0a4-90cc5c58a6b9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1046,6 +1094,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C8678"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "63ceea9c-7dda-4dd6-9645-e83d0e36ea32")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/e63f1eb7-89c4-57ab-8019-ac10579e69eb")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -1335,6 +1395,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C873512"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2be4ac43-eb81-4450-a0d1-b9959b2da0eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/816226cc-57ef-5782-ad26-77dc7ae3ffb7")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -1480,6 +1552,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C17436"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "550571dc-4970-456d-9f86-4ee126ff35e2")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -1633,6 +1717,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17695"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "13a6fb69-7920-4986-820e-5e384c16d74d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/cc574d3c-428a-5a97-af9c-f6598a8a8d0e")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -1779,6 +1875,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9d324c12-0e53-4ccd-b6b4-9e73dcdc61be")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "24bca3d1-a060-4b11-9dd5-a97f0a5705ca")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2073,6 +2181,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C87271"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "16d2f2f1-c402-4989-b42d-91c6a5288794")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/649bd1a4-8ef9-583d-a07a-5d61b41c253f")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr through_hole)
@@ -2274,6 +2394,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17556"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0957f25f-8033-428d-af7f-f057914be4ec")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/f925dc04-2951-533b-b7ee-7f35d29a89ab")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -2419,6 +2551,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C149504"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e900aaac-778a-4186-98af-6b1f47410863")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -2584,6 +2728,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C15850"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1c76ef3c-88a6-44d9-9122-3b730adb11b2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/3e101e00-74ed-500d-b38d-58d3414f7581")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -2733,6 +2889,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C49678"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3ac9bf4c-436a-4f65-abee-e62d8b511fa0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/de36b31e-02e9-5497-8944-648828587813")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -2878,6 +3046,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C87271"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "308f3193-34b7-440c-b6f5-ff734fc75b1c")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -3083,6 +3263,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C49678"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0e360ac9-ecd8-442e-9222-af81209d5ac6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/36eb168e-b737-5138-87d6-ee631f88058e")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -3228,6 +3420,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C87271"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "33bef2c3-5467-489e-8bd4-b7e5fa9e9720")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -3445,6 +3649,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C873512"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ad20add9-074c-4c15-b64b-1a90bbd3460c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/f8cbc336-d494-5045-b713-c198de42f36f")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -3590,6 +3806,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C17556"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bfc5599b-9f9b-48ef-b5b8-e86bd61e52a7")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -3743,6 +3971,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17513"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "05469fbc-6869-4d62-9b8f-e8e7bde5ff1f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/88bd63be-79cd-58a6-ace8-5ea0648fb671")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -3888,6 +4128,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C46653"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4e0ef8d6-98e1-4c37-9acc-e906e17678dd")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -4041,6 +4293,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C46653"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "93e8f31b-21e1-42b6-98ea-95e49ea8ed08")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/5e7f3e79-4d43-5ace-82d8-a9e2e1ef9b69")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -4187,6 +4451,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d920d536-ebeb-41e0-9ca7-1897222dd74e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f27232a4-b48d-46bf-a341-c170d97e2ad8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4481,6 +4757,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17414"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3212f380-1be5-4dc1-919b-c8276be5b2af")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/944b0c71-8a1c-56b6-a4c5-1d72d35859ef")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -4634,6 +4922,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3cfa6ff5-ebb2-4597-9628-9b316242cfe6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C7948"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c35e2f16-f533-4151-ae08-639e8a186698")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5044,6 +5344,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3504ed41-73e9-422f-bfce-d7b43686e844")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C6307429"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cfd33953-5c01-4d10-b65d-9779fb856198")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5482,6 +5794,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17513"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e843ce0b-6907-4962-a57d-73977bf8b3e2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/97e32b88-0dcf-5142-9d3c-c3b4640bfcd4")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -5631,6 +5955,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17475"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f99d5408-2a75-4025-890c-f254193d30b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/eb80c18d-b9c6-57f8-af9f-4ab8d8999606")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -5776,6 +6112,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C52034657"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c84700ea-7988-45fa-82bc-7cb86e240d38")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -5981,6 +6329,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C149504"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "23658137-63db-4889-bfea-0a287431156d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/f5b42177-b95f-5d42-a02b-240575976011")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -6142,6 +6502,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C873512"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ab23263b-3f59-4016-8753-0ef35a057e5e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/17513702-90ca-544b-ad16-7c2ecfeb18e2")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -6287,6 +6659,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C17414"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d8eeb65-b86b-476d-a99a-c5da1d54310f")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -6445,6 +6829,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "54443002-5fcb-4531-bab7-650c4bc8a07c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C47546"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1dcac2de-7220-4874-9e80-efa6071f2529")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6825,6 +7221,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C81598"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a737f82-c171-43b8-b799-db66acccb801")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/9950c9b3-6456-5595-bcb8-ed7c8a7d2af6")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -7116,6 +7524,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C113952"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d627f133-4459-4fee-ac15-1118cae5c5d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/65684941-c3ef-5fd0-97e7-aac52fb34ac7")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -7393,6 +7813,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17436"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "467821a4-2350-434a-914d-0b0f0217fd3c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/0885923d-19fa-5e63-b3cc-da27d5ea73b3")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -7538,6 +7970,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C17513"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b9855425-c8a3-4786-8197-4780ac133f59")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -7696,6 +8140,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0f5f9c2-4fdf-4b34-9410-098fbb1308f7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C47546"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fb7e65a1-c08c-4d06-9bb9-37cb129651b0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8072,6 +8528,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C49678"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "db027cf6-30e0-4316-a3ba-39c4d7befd70")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/643b9170-a19f-5337-a26d-ffd42b3e4d15")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -8233,6 +8701,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C873512"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e05f9096-d474-4eda-86cd-95f54adaed33")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/26f278e2-c2e0-50a2-82eb-85ce9d19eae8")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -8378,6 +8858,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C17414"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f1c4e9b6-3a09-4e31-8b42-e8a9de858f37")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -8531,6 +9023,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C46653"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "328458ac-84f6-4dd5-8fd4-1e93b659ea53")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/3132684a-1041-5c2f-b156-ff8bcb8d9e6b")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -8676,6 +9180,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C17513"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "02826a7c-f372-45df-9dda-55ffef39d8db")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -8826,6 +9342,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b6941ce6-e35d-4d2e-9efb-87f40943f3d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C81598"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eba88117-bd93-48e9-a772-04bc9c5f5a8c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9120,6 +9648,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17900"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "472559f7-21fe-433c-9c19-71029ed93628")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/eb5c6811-0b92-5936-a790-0b38d45e2b4a")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -9265,6 +9805,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C28323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3c95901-8509-4ead-9544-08bee663296c")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -9418,6 +9970,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17513"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5dd38ef3-fdc7-4504-9fbe-a312b3a848d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/c678f27b-ab17-59af-9ad9-bfb5d1716b6a")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -9563,6 +10127,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C2895548"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b3e95454-ec95-4424-8c77-00c141c00fca")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -9765,6 +10341,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "021592c7-363e-41da-895b-d21468eb1c6c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C3151650"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "12b01c62-e9df-447f-956c-ec0d463e128e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10016,6 +10604,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C27834"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ae19e6a3-7e72-49c2-a836-d0fd5b6c80d1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/cdb9d631-8923-51cd-8ebc-3f915e8ce516")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -10161,6 +10761,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49678"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6c591c96-80c4-4cf2-9e62-9ff98f70d12b")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -10314,6 +10926,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C27834"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e9713d95-2481-4227-92eb-224d33973c95")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/624e6925-f50a-52d0-8fd1-87b231a0f0ce")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -10459,6 +11083,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C17470"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d160ff9-c4d0-4dbf-b632-dbf400f878df")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -10609,6 +11245,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0787bcd1-fd23-44e0-90b8-47dd3bd4f723")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C113952"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fd15ae35-2fac-41b6-83f6-d71c6d27cdee")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10893,6 +11541,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C17633"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f8e5ca95-b2e4-440b-a336-6f8f14b4adbe")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/2b30e8e9-c479-5e6f-9531-89ce391feafc")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -11046,6 +11706,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7c322ef3-e85f-4388-a00e-9fd9e3cc922e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C7948"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "834c5c3d-ddac-403e-b2a4-4ce2c85de6ef")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11472,6 +12144,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C47546"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7e50d6d8-d0f2-4cab-a4b4-d77365171fe5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/13c17997-0432-5e95-b89e-1cfbf24e8dd0")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -11841,6 +12525,18 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C49678"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "12a23008-86ad-4dba-a579-18f28610d6d5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/d7340b9c-1f93-59dd-a878-6e0a0ba45f25")
 		(sheetfile "usb-killer-detector.kicad_sch")
 		(attr smd)
@@ -11987,6 +12683,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df6adc4e-cc0b-4337-ada5-1b1d72eabfc5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC Part #" "C2733655"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "be51e034-ed30-4db3-97ff-88276d8c870e")
 			(effects
 				(font
 					(size 1.27 1.27)
